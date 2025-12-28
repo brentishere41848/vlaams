@@ -1,0 +1,24 @@
+.venv/
+.vlaamscodex-venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+
+build/
+dist/
+*.egg-info/
+*.vsix
+vscode-extension/out/
+chocolatey/*.nupkg
+chocolatey/tools/*.whl
+chocolatey/tools/venv/
+
+.DS_Store
+Thumbs.db
+
+# AI assistant guidance files (local only)
+AGENTS.md
+CLAUDE.md
