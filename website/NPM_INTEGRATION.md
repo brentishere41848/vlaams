@@ -194,7 +194,7 @@ Verified:
 
 For issues or questions about the npm package:
 - npm page: https://www.npmjs.com/package/vlaamscodex
-- GitHub Issues: https://github.com/brentishere41848/Vlaamse-Codex/issues
+- GitHub Issues: https://github.com/brentishere41848/Vlaams-Codex/issues
 
 ---
 

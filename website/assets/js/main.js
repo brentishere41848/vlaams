@@ -1,6 +1,8 @@
 (function() {
     'use strict';
 
+    initVercelAnalytics();
+
     document.addEventListener('DOMContentLoaded', function() {
         initMobileMenu();
         initSmoothScroll();
@@ -8,6 +10,19 @@
         initDarkMode();
         initTooltips();
     });
+
+    function initVercelAnalytics() {
+        try {
+            if (typeof window === 'undefined') return;
+            import('https://cdn.jsdelivr.net/npm/@vercel/analytics/+esm')
+                .then(({ inject }) => {
+                    if (typeof inject === 'function') inject();
+                })
+                .catch(() => {});
+        } catch {
+            // ignore
+        }
+    }
 
     function initMobileMenu() {
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -183,6 +198,22 @@
         });
     }
 
+    function initLoadingScreen() {
+        const loadingScreen = document.getElementById('loadingScreen');
+        if (!loadingScreen) return;
+    }
+
+    function showLoadingScreen(callback) {
+        const loadingScreen = document.getElementById('loadingScreen');
+        if (!loadingScreen) return;
+
+        loadingScreen.classList.add('active');
+        setTimeout(() => {
+            loadingScreen.classList.remove('active');
+            if (callback) callback();
+        }, 800);
+    }
+
     function showToast(message, type = 'success') {
         const toast = document.createElement('div');
         toast.className = `toast ${type}`;
@@ -198,7 +229,8 @@
         initAccordion,
         initTabs,
         initModal,
-        showToast
+        showToast,
+        showLoadingScreen
     };
 
     if (typeof module !== 'undefined' && module.exports) {

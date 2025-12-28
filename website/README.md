@@ -1,6 +1,6 @@
 # Vlaams Codex Website
 
-Professional website for Vlaams Codex - a parody programming language using Flemish dialect keywords.
+Professional website for Vlaams Codex - a programming language using Flemish dialect keywords.
 
 ## 🌐 Live Demo
 
@@ -170,9 +170,9 @@ Edit CSS variables in `assets/css/main.css`:
 
 ```css
 :root {
-    --primary-color: #DA291C;      /* Flanders Red */
-    --primary-dark: #B31F15;
-    --primary-light: #FF6B5B;
+    --primary-color: #000000;
+    --primary-dark: #000000;
+    --primary-light: #111111;
     --secondary-color: #FFD700;     /* Gold */
     --accent-color: #2C3E50;       /* Dark Gray */
     /* ... more variables */
@@ -300,7 +300,7 @@ This website is part of Vlaams Codex project and is licensed under MIT License.
 ## 📞 Support
 
 For issues or questions:
-- GitHub Issues: https://github.com/brentishere41848/Vlaamse-Codex/issues
+- GitHub Issues: https://github.com/brentishere41848/Vlaams-Codex/issues
 - Documentation: https://vlaamscodex.dev/docs/
 
 ---
